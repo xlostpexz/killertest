@@ -44,74 +44,74 @@ function CheckLevel()
     Mon = "Brute [Lv. 45]"
     QN = "BuggyQuest1"
     QC = 2
-    CMON = CFrame.new(-1159.13, 46.3488121, 3971.05786, 0.677725613, -2.33113315e-08, 0.735315621, -8.56608147e-14, 1, 3.17025872e-08, -0.735315621, -2.14857057e-08, 0.677725613)
+    CMON = CFrame.new(-1051.02917, 78.567749, 4242.07471, -0.843239903, -1.94451868e-08, -0.537537515, -6.25478407e-08, 1, 6.19447817e-08, 0.537537515, 8.58561293e-08, -0.843239903)
     FIX = game:GetService("Workspace").Map.Pirate.Trees.Tree.Group.Wood
     elseif ml == 60 or ml <= 74 then
     Mon = "Desert Bandit [Lv. 60]"
     QN = "DesertQuest"
     QC = 1
-    CMON = CFrame.new(1050.86047, 51.4136658, 4486.85547, -0.475238144, 6.347652e-08, 0.879857183, 6.11935107e-08, 1, -3.90916028e-08, -0.879857183, 3.52637279e-08, -0.475238144)
+    CMON = CFrame.new(1050.11157, 51.599411, 4488.66992, 0.0106242513, 8.97273651e-08, 0.999943554, 5.97399747e-08, 1, -9.03671591e-08, -0.999943554, 6.0696685e-08, 0.0106242513)
     FIX = game:GetService("Workspace").Map.Desert.SomeHouses.PartHouse.Group.Part
     elseif ml == 75 or ml <= 89 then
     Mon = "Desert Officer [Lv. 70]"
     QN = "DesertQuest"
     QC = 2
-    CMON = CFrame.new(1514.23938, 14.9953012, 4398.46094, 0.3111009, 5.25693373e-08, -0.950376868, -3.30357319e-09, 1, 5.42327925e-08, 0.950376868, -1.37322314e-08, 0.3111009)
+    CMON = CFrame.new(1517.31165, 14.7953005, 4393.42822, -0.290638596, 3.15129363e-08, -0.956832886, 8.90123353e-09, 1, 3.0230872e-08, 0.956832886, 2.69265166e-10, -0.290638596)
     FIX = game:GetService("Workspace").Map.Desert.Model.Model.Part
     elseif ml == 90 or ml <= 99 then
     Mon = "Snow Bandit [Lv. 90]"
     QN = "SnowQuest"
     QC = 1
-    CMON = CFrame.new(1356.83569, 87.6160507, -1365.03503, 0.892687082, 0, 0.450676978, 0, 1, 0, -0.450676978, 0, 0.892687082)
+    CMON = CFrame.new(1410.25354, 126.530884, -1513.59827, -0.618696988, -5.69031489e-10, 0.78562969, -6.95172919e-10, 1, 1.76839141e-10, -0.78562969, -4.36738645e-10, -0.618696988)
     FIX = game:GetService("Workspace").Map.Ice.Part
     elseif ml == 100 or ml <= 119 then
     Mon = "Snowman [Lv. 100]"
     QN = "SnowQuest"
     QC = 2
-    CMON = CFrame.new(1356.83569, 87.6160507, -1365.03503, 0.892687082, 0, 0.450676978, 0, 1, 0, -0.450676978, 0, 0.892687082)
+    CMON = CFrame.new(1218.69067, 138.355103, -1487.77002, -0.768090487, -6.17512796e-08, -0.64034152, -5.75974601e-09, 1, -8.9526047e-08, 0.64034152, -6.50759091e-08, -0.768090487)
     FIX = game:GetService("Workspace").Map.Ice.Part
     elseif ml == 120 or ml <= 149 then
     Mon = "Chief Petty Officer [Lv. 120]"
     QN = "MarineQuest2"
     QC = 1
-    CMON = CFrame.new(-4687.44385, 20.9949379, 4397.62598, 0.22499384, 0, 0.974360168, 0, 1, 0, -0.974360168, 0, 0.22499384)
+    CMON = CFrame.new(-4604.7334, 55.2706528, 4411.19922, -0.165601104, -0.00443460373, 0.98618257, -2.12488541e-10, 0.999989867, 0.00449669221, -0.986192644, 0.000744656834, -0.16559957)
     FIX = game:GetService("Workspace").Map.MarineBase.Hotel.Group.Part
     elseif ml == 150 or ml <= 174 then
     Mon = "Sky Bandit [Lv. 150]"
     QN = "SkyQuest"
     QC = 1
-    CMON = CFrame.new(-4949.67676, 296.087524, -2902.47705, -0.471541077, 4.77626187e-08, 0.881844103, 9.52558477e-09, 1, -4.90686674e-08, -0.881844103, -1.4737811e-08, -0.471541077)
+    CMON = CFrame.new(-4956.18701, 296.087555, -2905.59302, -0.999946296, -1.56686966e-08, -0.0103730513, -1.50773882e-08, 1, -5.70826337e-08, 0.0103730513, -5.69231595e-08, -0.999946296)
     FIX = game:GetService("Workspace").Map.Sky.Cloud
     elseif ml == 175 or ml <= 189 then
     Mon = "Dark Master [Lv. 175]"
     QN = "SkyQuest"
     QC = 2
-    CMON = CFrame.new(-5264.89941, 388.9953, -2297.87549, 0.773597956, 0, 0.633676767, 0, 1, 0, -0.633676767, 0, 0.773597956)
+    CMON = CFrame.new(-5224.76172, 430.11087, -2279.73486, -0.875366688, 0.0112008806, -0.48333016, -2.15239324e-05, 0.999730706, 0.023207128, 0.48345992, 0.0203251429, -0.875130594)
     FIX = game:GetService("Workspace").Map.Sky.Part
 elseif ml == 190 or ml <= 209 then
     Mon = "Prisoner [Lv. 190]"
     QN = "PrisonerQuest"
     QC = 1
-    CMON = CFrame.new(5289.09229, 88.9948196, 470.68631, 0.588810682, 6.30054637e-06, 0.808272302, -1.90325841e-06, 1, -6.40860253e-06, -0.808272302, 2.23509824e-06, 0.588810682)
+    CMON = CFrame.new(5162.75586, 15.9961863, 489.834991, 0.717177927, -8.85419915e-09, 0.696889997, 2.77057861e-08, 1, -1.58070517e-08, -0.696889997, 3.06443617e-08, 0.717177927)
     FIX = game:GetService("Workspace").Map.Prison.Model.Part
 elseif ml == 210 or ml <= 249 then
     Mon = "Dangerous Prisoner [Lv. 210]"
     QN = "PrisonerQuest"
     QC = 2
-    CMON = CFrame.new(5547.75781, 88.9954834, 680.018921, -0.923481703, 3.13159418e-08, -0.383642495, 4.44295765e-08, 1, -2.53203432e-08, 0.383642495, -4.0427949e-08, -0.923481703)
+    CMON = CFrame.new(5548.29004, 15.9952106, 645.591675, 0.513494313, -7.3455638e-08, -0.858093023, 3.9348933e-08, 1, -6.20564222e-08, 0.858093023, -1.89942617e-09, 0.513494313)
     FIX = game:GetService("Workspace").Map.Prison.Model.Part
 elseif ml == 250 or ml <= 274 then
     Mon = "Toga Warrior [Lv. 250]"
     QN = "ColosseumQuest"
     QC = 1
-    CMON = CFrame.new(-1684.91296, 11.7828999, -2955.52075, -0.902893782, 8.91813023e-09, 0.4298639, 3.96497803e-08, 1, 6.25346956e-08, -0.4298639, 7.3506186e-08, -0.902893782)
+    CMON = CFrame.new(-1830.43762, 48.944252, -2743.79077, 0.9984622, -0.00192281546, 0.0554001257, -1.79210291e-09, 0.999398232, 0.0346868336, -0.0554336607, -0.0346334875, 0.997861564)
     FIX = game:GetService("Workspace").Map.Colosseum.Part
 elseif ml == 275 or ml <= 299 then
     Mon = "Gladiator [Lv. 275]"
     QN = "ColosseumQuest"
     QC = 2
-    CMON = CFrame.new(-1236.19006, 7.63129568, -2974.52588, 0.957824051, 0, 0.287355602, 0, 1.00000012, 0, -0.287355602, 0, 0.957824051)
-    FIX = game:GetService("Workspace").Map.Colosseum.Hotel.Group.Part
+    CMON = CFrame.new(-1334.38269, 58.3016281, -3227.77222, -0.149647266, -5.73700341e-08, 0.988739431, -6.36376924e-08, 1, 4.83917475e-08, -0.988739431, -5.56794042e-08, -0.149647266)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
     end
 end
 
@@ -2266,6 +2266,10 @@ AutoFarm:Toggle("Auto Farm", false, function(value)
 _G.auto_farm = value
 end)
 
+AutoFarm:Toggle("Remove Effect", false, function(value)
+_G.Remove_Effect = value
+end)
+
 AutoFarm:Dropdown("Select Weapon", weapon,function(value)
 _G.Weapon = value
 end)
@@ -2382,19 +2386,33 @@ TP:Button("Middle Town", function()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0  
 end)
 
+TP:Button("Desert Town", function()
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(984.823364, 6.56958914, 4249.4834, 0.818499744, 8.49807407e-08, 0.574506938, -6.42621814e-08, 1, -5.63651383e-08, -0.574506938, 9.21578014e-09, 0.818499744)
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+TP:Button("Snow Town", function()
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1133.30859, 26.6127472, -1186.96423, -0.920246303, 0, 0.39133966, 0, 1, -0, -0.39133966, 0, -0.920246303)
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
 spawn(function()
    game:GetService("RunService").RenderStepped:Connect(function()
     pcall(function()
         if _G.auto_farm then
             CheckLevel()
 if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-
-    local Distance2 = (FIX.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-    local tween_s = game:service"TweenService"
-    local info = TweenInfo.new(Distance2/250, Enum.EasingStyle.Linear)
-    local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = FIX.CFrame * CFrame.new(0,20,0)})
-    tween:Play()  
+        wait(0.5)        
+local Distance2 = (game:GetService("Workspace").LOL.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+local tween_s = game:service"TweenService"
+local info = TweenInfo.new(Distance2/250, Enum.EasingStyle.Linear)
+local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").LOL.CFrame * CFrame.new(0,0,0)})
+tween:Play()   
         
+
+
 wait(2)
 
 local args = {
@@ -2426,6 +2444,24 @@ end
 end)
 
 spawn(function()
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if _G.auto_farm then
+            if not game:GetService("Workspace"):FindFirstChild("LOL") then
+                local LOL = Instance.new("Part")
+                LOL.Name = "LOL"
+                LOL.Parent = game.Workspace
+                LOL.Anchored = true
+                LOL.Transparency = 1
+                LOL.Size = Vector3.new(7,-0.2,7)
+                LOL.Material = "Neon"
+            elseif game:GetService("Workspace"):FindFirstChild("LOL") then
+                game.Workspace["LOL"].CFrame = CMON
+            end
+        end
+    end)
+end)
+
+spawn(function()
    game:GetService("RunService").RenderStepped:Connect(function()
     pcall(function()
         if _G.auto_farm then
@@ -2450,6 +2486,11 @@ for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             v2.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
                             v2.HumanoidRootPart.CanCollide = false
                             v.Humanoid:ChangeState(11)
+                        v.Humanoid.JumpPower = 0
+                        v.Humanoid.WalkSpeed = 0
+                        if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
                             sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                         end
                     end
@@ -2476,6 +2517,18 @@ spawn(function()
             setfflag("HumanoidParallelRemoveNoPhysics", "False")
             setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
             game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+    end)
+end)
+
+spawn(function()
+    game:GetService('RunService').Stepped:Connect(function()
+        if _G.Remove_Effect then
+            for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
+                if v.Name == "CurvedRing" or v.Name == "SwordSlash" or v.Name == "Sounds" or v.Name == "SlashHit" or v.Name == "DamageCounter" then--or v.Name == "SlashHit"
+                    v:Destroy() 
+                end
+            end
         end
     end)
 end)
