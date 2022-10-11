@@ -82,12 +82,36 @@ function CheckLevel()
     QC = 1
     CMON = CFrame.new(-4949.67676, 296.087524, -2902.47705, -0.471541077, 4.77626187e-08, 0.881844103, 9.52558477e-09, 1, -4.90686674e-08, -0.881844103, -1.4737811e-08, -0.471541077)
     FIX = game:GetService("Workspace").Map.Sky.Cloud
-    elseif ml == 175 or ml <= 199 then
+    elseif ml == 175 or ml <= 189 then
     Mon = "Dark Master [Lv. 175]"
     QN = "SkyQuest"
     QC = 2
     CMON = CFrame.new(-5264.89941, 388.9953, -2297.87549, 0.773597956, 0, 0.633676767, 0, 1, 0, -0.633676767, 0, 0.773597956)
     FIX = game:GetService("Workspace").Map.Sky.Part
+elseif ml == 190 or ml <= 209 then
+    Mon = "Prisoner [Lv. 190]"
+    QN = "PrisonerQuest"
+    QC = 1
+    CMON = CFrame.new(5289.09229, 88.9948196, 470.68631, 0.588810682, 6.30054637e-06, 0.808272302, -1.90325841e-06, 1, -6.40860253e-06, -0.808272302, 2.23509824e-06, 0.588810682)
+    FIX = game:GetService("Workspace").Map.Prison.Model.Part
+elseif ml == 210 or ml <= 249 then
+    Mon = "Dangerous Prisoner [Lv. 210]"
+    QN = "PrisonerQuest"
+    QC = 2
+    CMON = CFrame.new(5547.75781, 88.9954834, 680.018921, -0.923481703, 3.13159418e-08, -0.383642495, 4.44295765e-08, 1, -2.53203432e-08, 0.383642495, -4.0427949e-08, -0.923481703)
+    FIX = game:GetService("Workspace").Map.Prison.Model.Part
+elseif ml == 250 or ml <= 274 then
+    Mon = "Toga Warrior [Lv. 250]"
+    QN = "ColosseumQuest"
+    QC = 1
+    CMON = CFrame.new(-1684.91296, 11.7828999, -2955.52075, -0.902893782, 8.91813023e-09, 0.4298639, 3.96497803e-08, 1, 6.25346956e-08, -0.4298639, 7.3506186e-08, -0.902893782)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+elseif ml == 275 or ml <= 299 then
+    Mon = "Gladiator [Lv. 275]"
+    QN = "ColosseumQuest"
+    QC = 2
+    CMON = CFrame.new(-1236.19006, 7.63129568, -2974.52588, 0.957824051, 0, 0.287355602, 0, 1.00000012, 0, -0.287355602, 0, 0.957824051)
+    FIX = game:GetService("Workspace").Map.Colosseum.Hotel.Group.Part
     end
 end
 
