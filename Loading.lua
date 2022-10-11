@@ -22,97 +22,219 @@ function CheckLevel()
     QC = 1
     CMON = CFrame.new(1036.70374, 81.010025, 1595.24316, 0.86694622, -6.96011782e-08, -0.498401672, 5.6375864e-08, 1, -4.15856114e-08, 0.498401672, 7.95466537e-09, 0.86694622)
     FIX = game:GetService("Workspace").Map.Windmill.MarketProp.Model.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 10 or ml <= 14 then
     Mon = "Monkey [Lv. 14]"
     QN = "JungleQuest"
     QC = 1
     CMON = CFrame.new(-1766.48645, 61.1783829, 45.2352715, 0.756809533, -2.0297577e-08, -0.65363574, 4.24678888e-08, 1, 1.81179391e-08, 0.65363574, -4.14703614e-08, 0.756809533)
     FIX = game:GetService("Workspace").Map.Jungle.QuestPlates.Door
+    function tp()
+        print("babaji")
+    end
     elseif ml == 15 or ml <= 29 then
     Mon = "Gorilla [Lv. 20]"
     QN = "JungleQuest"
     QC = 2
     CMON = CFrame.new(-1133.13049, 40.8067093, -525.448364, 0.899749458, 1.02657985e-07, 0.436406821, -9.6761724e-08, 1, -3.57388537e-08, -0.436406821, -1.00714628e-08, 0.899749458)
     FIX = game:GetService("Workspace").Map.Jungle.Small.PlateHolder.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 30 or ml <= 39 then
     Mon = "Pirate [Lv. 35]"
     QN = "BuggyQuest1"
     QC = 1
     CMON = CFrame.new(-1159.13, 46.3488121, 3971.05786, 0.677725613, -2.33113315e-08, 0.735315621, -8.56608147e-14, 1, 3.17025872e-08, -0.735315621, -2.14857057e-08, 0.677725613)
     FIX = game:GetService("Workspace").Map.Pirate.PartHouse.Group.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 40 or ml <= 59 then
     Mon = "Brute [Lv. 45]"
     QN = "BuggyQuest1"
     QC = 2
     CMON = CFrame.new(-1051.02917, 78.567749, 4242.07471, -0.843239903, -1.94451868e-08, -0.537537515, -6.25478407e-08, 1, 6.19447817e-08, 0.537537515, 8.58561293e-08, -0.843239903)
     FIX = game:GetService("Workspace").Map.Pirate.Trees.Tree.Group.Wood
+    function tp()
+        print("babaji")
+    end
     elseif ml == 60 or ml <= 74 then
     Mon = "Desert Bandit [Lv. 60]"
     QN = "DesertQuest"
     QC = 1
     CMON = CFrame.new(1050.11157, 51.599411, 4488.66992, 0.0106242513, 8.97273651e-08, 0.999943554, 5.97399747e-08, 1, -9.03671591e-08, -0.999943554, 6.0696685e-08, 0.0106242513)
     FIX = game:GetService("Workspace").Map.Desert.SomeHouses.PartHouse.Group.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 75 or ml <= 89 then
     Mon = "Desert Officer [Lv. 70]"
     QN = "DesertQuest"
     QC = 2
     CMON = CFrame.new(1517.31165, 14.7953005, 4393.42822, -0.290638596, 3.15129363e-08, -0.956832886, 8.90123353e-09, 1, 3.0230872e-08, 0.956832886, 2.69265166e-10, -0.290638596)
     FIX = game:GetService("Workspace").Map.Desert.Model.Model.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 90 or ml <= 99 then
     Mon = "Snow Bandit [Lv. 90]"
     QN = "SnowQuest"
     QC = 1
     CMON = CFrame.new(1410.25354, 126.530884, -1513.59827, -0.618696988, -5.69031489e-10, 0.78562969, -6.95172919e-10, 1, 1.76839141e-10, -0.78562969, -4.36738645e-10, -0.618696988)
     FIX = game:GetService("Workspace").Map.Ice.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 100 or ml <= 119 then
     Mon = "Snowman [Lv. 100]"
     QN = "SnowQuest"
     QC = 2
     CMON = CFrame.new(1218.69067, 138.355103, -1487.77002, -0.768090487, -6.17512796e-08, -0.64034152, -5.75974601e-09, 1, -8.9526047e-08, 0.64034152, -6.50759091e-08, -0.768090487)
     FIX = game:GetService("Workspace").Map.Ice.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 120 or ml <= 149 then
     Mon = "Chief Petty Officer [Lv. 120]"
     QN = "MarineQuest2"
     QC = 1
     CMON = CFrame.new(-4604.7334, 55.2706528, 4411.19922, -0.165601104, -0.00443460373, 0.98618257, -2.12488541e-10, 0.999989867, 0.00449669221, -0.986192644, 0.000744656834, -0.16559957)
     FIX = game:GetService("Workspace").Map.MarineBase.Hotel.Group.Part
+    function tp()
+        print("babaji")
+    end
     elseif ml == 150 or ml <= 174 then
     Mon = "Sky Bandit [Lv. 150]"
     QN = "SkyQuest"
     QC = 1
     CMON = CFrame.new(-4956.18701, 296.087555, -2905.59302, -0.999946296, -1.56686966e-08, -0.0103730513, -1.50773882e-08, 1, -5.70826337e-08, 0.0103730513, -5.69231595e-08, -0.999946296)
     FIX = game:GetService("Workspace").Map.Sky.Cloud
+    function tp()
+        print("babaji")
+    end
     elseif ml == 175 or ml <= 189 then
     Mon = "Dark Master [Lv. 175]"
     QN = "SkyQuest"
     QC = 2
     CMON = CFrame.new(-5224.76172, 430.11087, -2279.73486, -0.875366688, 0.0112008806, -0.48333016, -2.15239324e-05, 0.999730706, 0.023207128, 0.48345992, 0.0203251429, -0.875130594)
     FIX = game:GetService("Workspace").Map.Sky.Part
+    function tp()
+        print("babaji")
+    end
 elseif ml == 190 or ml <= 209 then
     Mon = "Prisoner [Lv. 190]"
     QN = "PrisonerQuest"
     QC = 1
     CMON = CFrame.new(5162.75586, 15.9961863, 489.834991, 0.717177927, -8.85419915e-09, 0.696889997, 2.77057861e-08, 1, -1.58070517e-08, -0.696889997, 3.06443617e-08, 0.717177927)
     FIX = game:GetService("Workspace").Map.Prison.Model.Part
+    function tp()
+        print("babaji")
+    end
 elseif ml == 210 or ml <= 249 then
     Mon = "Dangerous Prisoner [Lv. 210]"
     QN = "PrisonerQuest"
     QC = 2
     CMON = CFrame.new(5548.29004, 15.9952106, 645.591675, 0.513494313, -7.3455638e-08, -0.858093023, 3.9348933e-08, 1, -6.20564222e-08, 0.858093023, -1.89942617e-09, 0.513494313)
     FIX = game:GetService("Workspace").Map.Prison.Model.Part
+    function tp()
+        print("babaji")
+    end
 elseif ml == 250 or ml <= 274 then
     Mon = "Toga Warrior [Lv. 250]"
     QN = "ColosseumQuest"
     QC = 1
     CMON = CFrame.new(-1830.43762, 48.944252, -2743.79077, 0.9984622, -0.00192281546, 0.0554001257, -1.79210291e-09, 0.999398232, 0.0346868336, -0.0554336607, -0.0346334875, 0.997861564)
     FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+        print("babaji")
+    end
 elseif ml == 275 or ml <= 299 then
     Mon = "Gladiator [Lv. 275]"
     QN = "ColosseumQuest"
     QC = 2
-    CMON = CFrame.new(-1334.38269, 58.3016281, -3227.77222, -0.149647266, -5.73700341e-08, 0.988739431, -6.36376924e-08, 1, 4.83917475e-08, -0.988739431, -5.56794042e-08, -0.149647266)
+    CMON = CFrame.new(-1448.83374, 7.78580618, -3134.64722, 0.890395582, 0, 0.455187976, 0, 1, 0, -0.455187976, 0, 0.890395582)
     FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+        print("babaji")
     end
+elseif ml == 300 or ml <= 324 then
+    Mon = "Military Soldier [Lv. 300]"
+    QN = "MagmaQuest"
+    QC = 1
+    CMON = CFrame.new(-5366.47705, 61.3768997, 8556.12012, 0.141619563, -2.26716779e-08, -0.989921093, -4.05928482e-08, 1, -2.87098025e-08, 0.989921093, 4.42496031e-08, 0.141619563)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+        print("babaji")
+    end
+elseif ml == 325 or ml <= 374 then
+    Mon = "Military Spy [Lv. 325]"
+    QN = "MagmaQuest"
+    QC = 2
+    CMON = CFrame.new(-5805.02734, 99.7940063, 8784.0459, -0.0944378451, -5.72376258e-10, 0.995530784, -1.81040216e-09, 1, 4.032078e-10, -0.995530784, -1.76423298e-09, -0.0944378451)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+        print("babaji")
+    end
+elseif ml == 375 or ml <= 399 then
+    Mon = "Fishman Warrior [Lv. 375]"
+    QN = "FishmanQuest"
+    QC = 1
+    CMON = CFrame.new(61070.1211, 66.9227676, 1525.00977, -0.614753902, 4.80548152e-08, 0.788718998, 1.06641984e-07, 1, 2.21926459e-08, -0.788718998, 9.77535706e-08, -0.614753902)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+local args = {
+    [1] = "requestEntrance",
+    [2] = Vector3.new(61163.8515625, 11.6796875, 1819.7841796875)
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+elseif ml == 400 or ml <= 449 then
+    Mon = "Fishman Commando [Lv. 400]"
+    QN = "FishmanQuest"
+    QC = 2
+    CMON = CFrame.new(61891.9961, 75.8156433, 1393.4491, -0.319826603, 0, -0.947476268, 0, 1.00000012, 0, 0.947476268, 0, -0.319826603)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+    function tp()
+local args = {
+    [1] = "requestEntrance",
+    [2] = Vector3.new(61163.8515625, 11.6796875, 1819.7841796875)
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+elseif ml == 450 or ml <= 474 then
+    Mon = "God's Guard [Lv. 450]"
+    QN = "SkyExp1Quest"
+    QC = 1
+    CMON = CFrame.new(-4722.36279, 853.782532, -1939.90576, 0.965356886, -1.61061013e-08, 0.260933161, 9.01602526e-09, 1, 2.83690227e-08, -0.260933161, -2.50336498e-08, 0.965356886)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+        function tp()
+local args = {
+    [1] = "requestEntrance",
+    [2] = Vector3.new(-7894.61767578125, 5547.1416015625, -380.29119873046875)
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+elseif ml == 475 or ml <= 499 then
+    Mon = "Shanda [Lv. 475]"
+    QN = "SkyExp1Quest"
+    QC = 2
+    CMON = CFrame.new(-7750.50391, 5577.92236, -488.500214, 0.999135256, 9.21268963e-08, 0.0415787585, -9.31971442e-08, 1, 2.3801956e-08, -0.0415787585, -2.76563945e-08, 0.999135256)
+    FIX = game:GetService("Workspace").Map.Colosseum.Part
+function tp()
+local args = {
+    [1] = "requestEntrance",
+    [2] = Vector3.new(-7894.61767578125, 5547.1416015625, -380.29119873046875)
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end
 end
 
 weapon = {}
@@ -2270,15 +2392,22 @@ AutoFarm:Toggle("Remove Effect", false, function(value)
 _G.Remove_Effect = value
 end)
 
-AutoFarm:Dropdown("Select Weapon", weapon,function(value)
+AutoFarm:Toggle("White Screen", false, function(value)
+_G.White_Screen = value
+end)
+
+local DropDown = AutoFarm:Dropdown("Select Weapon", weapon,function(value)
 _G.Weapon = value
 end)
 
 AutoFarm:Button("Refresh Weapon", function()
-        table.clear(weapon)
-for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-   table.insert(weapon,v.Name)
-end
+DropDown:Refresh(weapoz)
+    weapoz = {}
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:IsA("Tool") then
+            table.insert(weapoz ,v.Name)
+        end
+    end
 end)
 
 AutoFarm:Button("Redeem All X2 Code", function()
@@ -2404,7 +2533,9 @@ spawn(function()
         if _G.auto_farm then
             CheckLevel()
 if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-        wait(0.5)        
+        wait(0.5)       
+    tp()    
+    
 local Distance2 = (game:GetService("Workspace").LOL.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 local tween_s = game:service"TweenService"
 local info = TweenInfo.new(Distance2/250, Enum.EasingStyle.Linear)
@@ -2532,4 +2663,16 @@ spawn(function()
         end
     end)
 end)
+
+        spawn(function()
+       game:GetService("RunService").RenderStepped:Connect(function()
+        pcall(function()
+            if _G.White_Screen then
+    game.RunService:Set3dRenderingEnabled(false)
+elseif _G.White_Screen == false then
+   game.RunService:Set3dRenderingEnabled(true)
+        end
+        end)
+       end)
+        end)
 
