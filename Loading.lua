@@ -2670,7 +2670,7 @@ spawn(function()
             CheckLevel()
 if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
 wait(1)
-
+tp()  
 local args = {
     [1] = "StartQuest",
     [2] = QN,
@@ -2703,9 +2703,6 @@ spawn(function()
         if _G.auto_farm then
             CheckLevel()
            if not game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-        wait(0.5)       
-    tp()    
-    
 local Distance2 = (game:GetService("Workspace").LOL.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 local tween_s = game:service"TweenService"
 local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
