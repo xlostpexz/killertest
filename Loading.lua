@@ -134,7 +134,7 @@ elseif ml == 275 or ml <= 299 then
     Mon = "Gladiator [Lv. 275]"
     QN = "ColosseumQuest"
     QC = 2
-    CMON = CFrame.new(-1448.83374, 7.78580618, -3134.64722, 0.890395582, 0, 0.455187976, 0, 1, 0, -0.455187976, 0, 0.890395582)
+    CMON = CFrame.new(-1204.62, 7.41440344, -3159.01123, 0.238906518, 0, 0.971042514, -0, 1, -0, -0.971042633, 0, 0.238906488)
     function tp()
         print("babaji")
     end
@@ -270,6 +270,22 @@ elseif ml == 800 or ml <= 874 then
     QN = "Area2Quest"
     QC = 2
     CMON = CFrame.new(-478.384338, 110.393898, -276.981232, 0.995482504, -1.23470434e-08, -0.0949452445, 1.28435502e-08, 1, 4.61830796e-09, 0.0949452445, -5.81687898e-09, 0.995482504)
+function tp()
+print("vxny on top")
+end
+elseif ml == 875 or ml <= 899 then
+    Mon = "Marine Lieutenant [Lv. 875]"
+    QN = "MarineQuest3"
+    QC = 1
+    CMON = CFrame.new(-2978.09009, 73.0914459, -2957.07056, -0.236529067, 2.30422206e-08, 0.971624434, -2.54612988e-08, 1, -2.9913366e-08, -0.971624434, -3.18141993e-08, -0.236529067)
+function tp()
+print("vxny on top")
+end
+elseif ml == 900 or ml <= 949 then
+    Mon = "Marine Captain [Lv. 900]"
+    QN = "MarineQuest3"
+    QC = 2
+    CMON = CFrame.new(-1782.33301, 95.8781967, -3259.21948, 0.999133885, -1.37714666e-08, -0.0416074619, 1.22071233e-08, 1, -3.78517626e-08, 0.0416074619, 3.73111e-08, 0.999133885)
 function tp()
 print("vxny on top")
 end
@@ -2508,6 +2524,12 @@ Sections:CreateToggle("Auto Farm Level", {Toggled = false, Description = "Open T
     _G.auto_farm = value
 end)
 
+if firstsea then
+Sections:CreateToggle("Auto New World", {Toggled = false, Description = "Open This For Use Auto New World Function"}, function(value)
+    _G.auto_new_world = value
+end)
+end
+
 Sections:CreateToggle("Remove Effect", {Toggled = false, Description = "Open This For Remove Effect, Sound, Animation"}, function(value)
     _G.Remove_Effect = value
 end)
@@ -2955,4 +2977,108 @@ spawn(function()
             end)
         end
     end
+end)
+
+spawn(function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+    if _G.auto_new_world then
+        if game:GetService("Players").LocalPlayer.Data.Level.Value >= 700 then
+                _G.auto_farm = false
+local args = {
+    [1] = "DressrosaQuestProgress",
+    [2] = "Detective"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Key"))
+end
+end
+end)
+end)
+end)
+
+spawn(function()
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if _G.auto_new_world then
+            if game:GetService("Players").LocalPlayer.Data.Level.Value >= 700 then
+                _G.auto_farm = false
+            if not game:GetService("Workspace"):FindFirstChild("LOL") then
+                local LOL = Instance.new("Part")
+                LOL.Name = "LOL"
+                LOL.Parent = game.Workspace
+                LOL.Anchored = true
+                LOL.Transparency = 1
+                LOL.Size = Vector3.new(7,-0.2,7)
+                LOL.Material = "Neon"
+            elseif game:GetService("Workspace"):FindFirstChild("LOL") then
+                game.Workspace["LOL"].CFrame = CFrame.new(1349.19971, 37.6925659, -1327.23022, 0.597423434, -3.74240772e-09, 0.801925957, -1.21086234e-08, 1, 1.36875267e-08, -0.801925957, -1.78874693e-08, 0.597423434)
+            end
+            end
+    end
+    end)
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.auto_new_world then
+            if game:GetService("Players").LocalPlayer.Data.Level.Value >= 700 then
+                _G.auto_farm = false
+            if game:GetService("Workspace").Map.Ice.Door.Transparency == 0 then
+ local Distance2 = (game:GetService("Workspace").LOL.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+local tween_s = game:service"TweenService"
+local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
+local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").LOL.CFrame * CFrame.new(0,0,0)})
+tween:Play()   
+
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.Weapon))
+end
+end
+end
+end)
+end)
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.auto_new_world then
+            if game:GetService("Players").LocalPlayer.Data.Level.Value >= 700 then
+                _G.auto_farm = false
+            if game:GetService("Workspace").Map.Ice.Door.Transparency == 1 then
+ local Distance2 = (game:GetService("Workspace").Enemies["Ice Admiral [Lv. 700] [Boss]"].HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+local tween_s = game:service"TweenService"
+local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
+local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").Enemies["Ice Admiral [Lv. 700] [Boss]"].HumanoidRootPart.CFrame * CFrame.new(0,20,0)})
+tween:Play()   
+
+local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+Camera:Stop()
+getupvalues(CombatFramework)[2].activeController.hitboxMagnitude = 80
+getupvalues(CombatFramework)[2]['activeController']:attack()    
+
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.Weapon))
+
+local args = {
+    [1] = "TravelDressrosa"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end
+end
+end)
+end)
+end)
+
+spawn(function()
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") and _G.auto_new_world then
+            setfflag("HumanoidParallelRemoveNoPhysics", "False")
+            setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+            game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+    end)
 end)
