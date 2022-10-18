@@ -2679,10 +2679,13 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         local Stats = Tabs2:CreateSection("Auto Stats")
         local Tabs3 = Window:CreatePage("Buy Item")
         local Buy = Tabs3:CreateSection("Buy Item")
+        local Tabs5 = Window:CreatePage("Raid")
+        local Raid = Tabs5:CreateSection("Raid")
         local Tabs4 = Window:CreatePage("Setting")
         local Set = Tabs4:CreateSection("Setting")
         Sections:CreateToggle("Auto Farm Level", {Toggled = false, Description = "Open This For Use Auto Farm Function"}, function(value)
             _G.auto_farm = value
+            _G.Clicker = value
         end)
         
         if firstsea then
@@ -2839,6 +2842,14 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         end)
         
+        Raid:CreateDropdown("Please Select Raid", {List = {"Flame","Ice"}, Default = value}, function(value)
+            _G.RaidShip = value
+        end)
+        
+        Raid:CreateToggle("Auto Raid", {Toggled = false, Description = "Open This For Use Auto Raid Function"}, function(value)
+            _G.Raid = value
+        end)
+        
         Set:CreateToggle("Fast Attack", {Toggled = true, Description = "Open This For Use Fast Attack Function"}, function(value)
             _G.Fast_Attack_Normal = value
         end)
@@ -2847,11 +2858,6 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
             _G.auto_buso = value
         end)
         
-        Set:CreateToggle("Anti Afk", {Toggled = true, Description = "Open This For Use Anti Afk Function"}, function(value)
-        _G.AntiAfk = value
-        end)
-    
-        
         spawn(function()
            game:GetService("RunService").RenderStepped:Connect(function()
             pcall(function()
@@ -2859,7 +2865,6 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                     CheckLevel()
     if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
         wait(1)
-        tp()  
         local args = {
             [1] = "StartQuest",
             [2] = QN,
@@ -2868,19 +2873,17 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         
-        elseif game:GetService("Workspace").Enemies[Mon] then
-            
+    elseif game:GetService("Workspace").Enemies[Mon] then
             local Distance2 = (game:GetService("Workspace").Enemies[Mon].HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
             local tween_s = game:service"TweenService"
             local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
             local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").Enemies[Mon].HumanoidRootPart.CFrame * CFrame.new(0,45,0)})
-            tween:Play()   
+            tween:Play()
         local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
         local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
         Camera:Stop()
         getupvalues(CombatFramework)[2].activeController.hitboxMagnitude = 80
-        getupvalues(CombatFramework)[2]['activeController']:attack()    
-        end
+end
             end
             end)
            end)
@@ -2897,11 +2900,84 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
         local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").LOL.CFrame * CFrame.new(0,0,0)})
         tween:Play()   
+        if Distance2 >= 3000 then
+                    tp() 
+        end
         end 
         end
         end)
         end)
         end)
+        
+local plr = game.Players.LocalPlayer
+
+local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
+local CbFw2 = CbFw[2]
+
+function GetCurrentBlade() 
+    local p13 = CbFw2.activeController
+    local ret = p13.blades[1]
+    if not ret then return end
+    while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
+    return ret
+end
+function AttackNoCD() 
+    local AC = CbFw2.activeController
+    for i = 1, 1 do 
+        local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
+            plr.Character,
+            {plr.Character.HumanoidRootPart},
+            60
+        )
+        local cac = {}
+        local hash = {}
+        for k, v in pairs(bladehit) do
+            if v.Parent:FindFirstChild("HumanoidRootPart") and not hash[v.Parent] then
+                table.insert(cac, v.Parent.HumanoidRootPart)
+                hash[v.Parent] = true
+            end
+        end
+        bladehit = cac
+        if #bladehit > 0 then
+            local u8 = debug.getupvalue(AC.attack, 5)
+            local u9 = debug.getupvalue(AC.attack, 6)
+            local u7 = debug.getupvalue(AC.attack, 4)
+            local u10 = debug.getupvalue(AC.attack, 7)
+            local u12 = (u8 * 798405 + u7 * 727595) % u9
+            local u13 = u7 * 798405
+            (function()
+                u12 = (u12 * u9 + u13) % 1099511627776
+                u8 = math.floor(u12 / u9)
+                u7 = u12 - u8 * u9
+            end)()
+            u10 = u10 + 1
+            debug.setupvalue(AC.attack, 5, u8)
+            debug.setupvalue(AC.attack, 6, u9)
+            debug.setupvalue(AC.attack, 4, u7)
+            debug.setupvalue(AC.attack, 7, u10)
+            pcall(function()
+                for k, v in pairs(AC.animator.anims.basic) do
+                    v:Play()
+                end                  
+            end)
+            if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then 
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
+                game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, i, "") 
+            end
+        end
+    end
+end
+
+spawn(function()
+	pcall(function()
+		while wait(.10) do
+		   if _G.Clicker then
+AttackNoCD()      
+end
+end
+end)
+end)
         
         spawn(function()
             game:GetService("RunService").Heartbeat:Connect(function()
@@ -3055,6 +3131,30 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         					}
         					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         				end
+    if game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") and game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate").Level.Value >= 300  then
+        				if game.Players.LocalPlayer.Data.Fragments.Value < 1500 then
+        				    if game.Players.LocalPlayer.Data.Level.Value > 1100 then
+        				_G.auto_farm = false
+        				_G.RaidShip = "Flame"
+        				_G.Raid = true
+        				    end
+        				end
+			end
+        				if game.Players.LocalPlayer.Data.Fragments.Value > 1499 then
+local args = {
+    [1] = "BlackbeardReward",
+    [2] = "DragonClaw",
+    [3] = "2"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+				if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw").Level.Value >= 300  then
+					local args = {
+						[1] = "BuySuperhuman"
+					}
+					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+				end
                             end
             end)
            end)
@@ -3117,54 +3217,6 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 end)
                end)
                 end)
-        spawn(function()
-            while task.wait(0.1) do
-                if _G.Fast_Attack_Normal then
-                    pcall(function()
-                        local AC = CbFw2.activeController
-                        for i = 1,1 do 
-                            local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
-                                plr.Character,
-                                {plr.Character.HumanoidRootPart},
-                                60
-                            )
-                            local cac = {}
-                            local hash = {}
-                            for k, v in pairs(bladehit) do
-                                if v.Parent:FindFirstChild("HumanoidRootPart") and not hash[v.Parent] then
-                                    table.insert(cac, v.Parent.HumanoidRootPart)
-                                    hash[v.Parent] = true
-                                end
-                            end
-                            bladehit = cac
-                            if #bladehit > 0 then
-                                local u8 = debug.getupvalue(AC.attack, 5)
-                                local u9 = debug.getupvalue(AC.attack, 6)
-                                local u7 = debug.getupvalue(AC.attack, 4)
-                                local u10 = debug.getupvalue(AC.attack, 7)
-                                local u12 = (u8 * 798405 + u7 * 727595) % u9
-                                local u13 = u7 * 798405
-                                (function()
-                                    u12 = (u12 * u9 + u13) % 1099511627776
-                                    u8 = math.floor(u12 / u9)
-                                    u7 = u12 - u8 * u9
-                                end)()
-                                u10 = u10 + 1
-                                debug.setupvalue(AC.attack, 5, u8)
-                                debug.setupvalue(AC.attack, 6, u9)
-                                debug.setupvalue(AC.attack, 4, u7)
-                                debug.setupvalue(AC.attack, 7, u10)
-                                if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then 
-                                    game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
-                                    game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
-                                    game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, i, "") 
-                                end
-                            end
-                        end
-                    end)
-                end
-            end
-        end)
         
         spawn(function()
             game:GetService("RunService").RenderStepped:Connect(function()
@@ -3228,6 +3280,8 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         end)
         end)
         
+        
+        
         spawn(function()
            game:GetService("RunService").RenderStepped:Connect(function()
             pcall(function()
@@ -3243,13 +3297,10 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
         local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").Enemies["Ice Admiral [Lv. 700] [Boss]"].HumanoidRootPart.CFrame * CFrame.new(0,20,0)})
         tween:Play()   
-        
         local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
         local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
         Camera:Stop()
         getupvalues(CombatFramework)[2].activeController.hitboxMagnitude = 80
-        getupvalues(CombatFramework)[2]['activeController']:attack()    
-        
         end
         end
         end
@@ -3285,8 +3336,77 @@ end
             end)
         end)
         
-        while _G.AntiAfk do wait(120)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"W",false,game)
-wait(0.2)
-game:GetService("VirtualInputManager"):SendKeyEvent(false,"W",false,game)
+        spawn(function()
+           game:GetService("RunService").RenderStepped:Connect(function()
+            pcall(function()
+                if _G.Raid then
+                    if not game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland1") then
+local args = {
+    [1] = "RaidsNpc",
+    [2] = "Select",
+    [3] = _G.RaidShip
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+fireclickdetector(game:GetService("Workspace").Map.CircleIsland.RaidSummon2.Button.Main.ClickDetector)
+                    end
 end
+        end)
+        end)
+        end)
+        
+        spawn(function()
+           game:GetService("RunService").RenderStepped:Connect(function()
+            pcall(function()
+                if _G.Raid then
+if game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland5") then
+    _G.Raidisland = "RaidIsland5"
+elseif game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland4") then
+    _G.Raidisland = "RaidIsland4"
+elseif game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland3") then
+    _G.Raidisland = "RaidIsland3"
+elseif game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland2") then
+    _G.Raidisland = "RaidIsland2"
+elseif game:GetService("Workspace").Map.RaidMap:FindFirstChild("RaidIsland1") then
+    _G.Raidisland = "RaidIsland1"
+end
+end
+        end)
+        end)
+        end)
+        
+        spawn(function()
+           game:GetService("RunService").RenderStepped:Connect(function()
+            pcall(function()
+                if _G.Raid then
+        local Distance2 = (game:GetService("Workspace").Map.RaidMap[_G.Raidisland]["EnemySpawner"].Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+        local tween_s = game:service"TweenService"
+        local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
+        local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = game:GetService("Workspace").Map.RaidMap[_G.Raidisland]["EnemySpawner"].CFrame * CFrame.new(0,90,0)})
+        tween:Play()    
+    end
+        end)
+        end)
+        end)
+        
+        spawn(function()
+           game:GetService("RunService").RenderStepped:Connect(function()
+            pcall(function()
+                if _G.Raid then
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.Humanoid.Health = die
+end
+    end
+        end)
+        end)
+        end)
+        
+        spawn(function()
+            game:GetService("RunService").Heartbeat:Connect(function()
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid") and _G.Raid then
+                    setfflag("HumanoidParallelRemoveNoPhysics", "False")
+                    setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+                    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+                end
+            end)
+        end)
